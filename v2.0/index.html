@@ -12,10 +12,10 @@
     <!-- h1 ng-bind="nome"></h1 -->
     <input type="text" ng-model="nome" placeholder="Enter a name here">
 
-    <button ng-click="adicionar()" ng-init="counter=0">
+    <button ng-click="adicionar()" ng-init="count=0"> <!-- ng-click: Permite instanciar o evento de click, semelhante ao onclick. Nesse caso inves de referencia uma variavel, ele referencia uma funcao que sera descrita no controller-->
         Adicionar
     </button>
-    <button ng-click="subtrair()" ng-init="counter=0">
+    <button ng-click="subtrair()" ng-init="count=0"> 
         Subtrair
     </button>
     <span>
