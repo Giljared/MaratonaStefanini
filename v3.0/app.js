@@ -18,17 +18,17 @@
     .controller('controlador', function($scope) {
         $scope.nome = 'Joao';
         $scope.count = '0';
-        $scope.adicionar =  function(){$scope.count = fazer('add')};
-        $scope.subtrair =  function(){$scope.count = fazer('sub')};
+        $scope.adicionar =  function(){$scope.count = fazer('add')}; //exemplo das possibilidades que o angularJs te propoem.
+        $scope.subtrair =  function(){$scope.count = fazer('sub')}; //No caso, ele criou uma variavel que possui uma arrow function que realizar a logica de adicionar ou subtrair
     });
     
-    var fazer = (function (action) {
-        var counter = 0;
-        return function(action) {
-            if(action == 'add'){
-                counter += 1; return counter;
+    var fazer = (function (action) { //recebeer um valor como parametro "add" or "sub"
+        var counter = 0; //define o valor inicial
+        return function(action) { 
+            if(action == 'add'){ //verificar os parametros
+                counter += 1; return counter; //retorna o valor de counter somando
             } else if (action == 'sub'){
-                counter -= 1; return counter;
+                counter -= 1; return counter; //retorna o valor de counter subtraindo
             }
         }
     })();

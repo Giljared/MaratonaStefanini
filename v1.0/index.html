@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app"> <!-- ng-app: Declara um elemento como o elemento raiz da aplicação, ocasionando a mudança do comportamento padrão da tag.
+                                A diretiva ng-app diz ao AngularJS que o elemento <div> é o "proprietário" de um aplicativo AngularJS.-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
-    <script src="./app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script> <!-- O AngularJS é iniciado automaticamente quando a página da Web foi carregada pr causa desse codigo. -->
+    <script src="./app.js"></script> <!-- Referencia para o HTML onde esta o controle na raiz do projeto-->
 </head>
-<body ng-controller="controlador">
+<body ng-controller="controlador"> <!-- ng-controller: Especifica um controller JavaScript para aquele HTML em questão.-->
     <h1>Ola {{nome}}</h1>
-    <!-- h1 ng-bind="nome"></h1 -->
-    <input type="text" ng-model="nome" placeholder="Enter a name here">
+    <!-- <h1 ng-bind="nome"></h1 --> <!-- A diretriz ng-bind liga o innerHTML do elemento <h1> ao nome da variável da aplicação -->
+    <input type="text" ng-model="nome" placeholder="Enter a name here"> <!-- ng-model: É similar ao ng-bind, mas permite ligação direta bidirecional (two-way data binding ) entre a view e o escopo do aplicativo. 
+                                                                            A diretriz do modelo ng-model vincula o valor do campo de entrada ao nome da variável da aplicação.-->
 
-    <button ng-click="count = count + 1" ng-init="count=0">
+    <button ng-click="count = count + 1" ng-init="count=0"> <!-- ng-click: Permite instanciar o evento de click, semelhante ao onclick.-->
         Adicionar
     </button>
-    <button ng-click="count = count - 1" ng-init="count=0">
+    <button ng-click="count = count - 1" ng-init="count=0"> <!-- ng-init: define um valor padrao para a variavel em questao.-->
         Subtrair
     </button>
     <span>
-        count: {{count}}
+        count: {{count}} 
     </span>
 </body>
 </html>
