@@ -5,10 +5,10 @@
      *  ou seja
      * 
      * NON strict-mode
-     * variavel = "string";
+     * variavel = "string";     // virou global
      * 
      * USE strict-mode
-     * var variavel = "string";
+     * var variavel = "string";  // local ou global
      * 
      */
     "use strict"
