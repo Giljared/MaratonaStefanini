@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body ng-controller="controlador">
+    <h1>Ola {{nome}}</h1>
+    <!-- h1 ng-bind="nome"></h1 -->
+    <input type="text" ng-model="nome" placeholder="Enter a name here">
+
+    <button ng-click="adicionar()" ng-init="counter=0">
+        Adicionar
+    </button>
+    <button ng-click="subtrair()" ng-init="counter=0">
+        Subtrair
+    </button>
+    <span>
+        count: {{count}}
+    </span>
+
+</body>
+</html>
